@@ -32,8 +32,10 @@
         <!-- Site wrapper -->
         <div class="wrapper">
             <!-- Inicio Header -->
+            @include("theme/$theme/header")
             <!-- Fin Header -->
             <!-- Inicio Aside -->
+            @include("theme/$theme/aside")
             <!-- Fin Aside -->
             <div class="content-wrapper">
                 <section class="content">
@@ -61,6 +63,7 @@
                 </section>
             </div>
             <!-- Inicio Footer -->
+            @include("theme/$theme/footer")
             <!-- Fin Footer -->                    
         </div>
         <!-- jQuery 3 -->
