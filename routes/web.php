@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,4 +12,4 @@
 |
 */
 
-Route::get('permiso/{nombre}/{slug}', 'PermisoController@index');
+Route::get('/', 'InicioController@index');
