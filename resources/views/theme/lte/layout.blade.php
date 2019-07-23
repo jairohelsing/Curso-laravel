@@ -61,6 +61,10 @@
         <!-- AdminLTE App -->
         <script src="{{asset("assets/$theme/dist/js/adminlte.min.js")}}"></script>
 
+        <script src="{{asset("js/jquery-validation/jquery.validate.min.js")}}"></script>
+        <script src="{{asset("js/jquery-validation/localization/messages_es.min.js")}}"></script>
+        <script src="{{asset("js/funciones.js")}}"></script>
+
         @yield('scripts')
 
     </body>
