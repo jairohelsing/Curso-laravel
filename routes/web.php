@@ -15,7 +15,7 @@ Route::get('/', 'InicioController@index');
 Route::get('seguridad/login', 'Seguridad\LoginController@index')->name('login');
 Route::post('seguridad/login', 'Seguridad\LoginController@login')->name('login_post');
 Route::get('seguridad/logout', 'Seguridad\LoginController@logout')->name('logout');
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'superadmin']], function () {
     Route::get('', 'AdminController@index');
     Route::get('permiso', 'PermisoController@index')->name('permiso');
     Route::get('permiso/crear', 'PermisoController@crear')->name('crear_permiso');
