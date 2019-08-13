@@ -33,9 +33,28 @@ var Biblioteca = function () {
                     
                 },
                 submitHandler: function (form) {
-                    
+                    return true;
                 }
             });
         },
+        notificaciones: function (mensaje, titulo, tipo) {
+            toastr.options = {
+                closeButton: true,
+                newestOnTop: true,
+                positionClass: 'toast-top-right',
+                //preventDuplicates: true, con esto se puede quitar el duplicado
+                timeOut: '5000'
+            };
+            if (tipo == 'error') {
+                toastr.error(mensaje, titulo);
+            } else if (tipo == 'success') {
+                toastr.success(mensaje, titulo);
+            } else if (tipo == 'info') {
+                toastr.info(mensaje, titulo);
+            } else if (tipo == 'warning') {
+                toastr.warning(mensaje, titulo);
+            }
+        },
+
     }
 }();
